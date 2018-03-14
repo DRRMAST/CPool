@@ -10,7 +10,7 @@ int my_strlen(const char *s1)
     }  
     return n;  
 }
-int my_putstring(char *ptr)
+int my_putstr ( char const * str ) 
 {
-	return write(1,ptr,my_strlen(ptr));
+	return write(1,str,my_strlen(str));
 }
