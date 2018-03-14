@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
 int my_strcmp(const char *s1,const char *s2)
 {  
@@ -64,12 +67,15 @@ int my_getnbr(char const *str)
 	while (*cp)
     {  
 		t = *cp;
-		if(t >= '0' && t <= '9')
+		if((t >= '0' && t <= '9') || t == '-' || t == '+')
 		{
 			nbr_flag = 'y';
-			nbr_len++;
-			re[i] = t;
-			i++;
+			if(t >= '0' && t <= '9')
+			{
+				nbr_len++;
+				re[i] = t;	
+				i++;
+			}
 		}
 		else
 		{
@@ -82,15 +88,14 @@ int my_getnbr(char const *str)
 			minus++;
 		cp++;  
     }
-    
     i = 1;
     if(nbr_len > 10)
 		sum = 0;
 	else
 	{
-		if(minus % 2 == 1)
+		if(minus % 2 == 1 && nbr_len == 10)
 			line_flag = my_strcmp(re,"2147483648");
-		if(minus % 2 == 0)
+		if(minus % 2 == 0 && nbr_len == 10)
 			line_flag = my_strcmp(re,"2147483647");
 		if(line_flag == 1)
 			sum = 0;
