@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
 
 int my_strcmp(const char *s1,const char *s2)
 {  
@@ -19,15 +16,7 @@ int my_strcmp(const char *s1,const char *s2)
     else  
         return -1; 
 }//0--equal;1--s1>s2;-1--s1<s2
-int my_strlen(const char *s1)
-{
-	int n = 0;  
-    while(*s1++)   
-    {  
-        n++;      
-    }  
-    return n;  
-}
+int my_strlen ( char const * str );
 char *my_strcpy(char *dest,const char *src)
 {
 	char *tp = dest;
@@ -43,10 +32,7 @@ char *my_strcpy(char *dest,const char *src)
 		return tp;
 	return tp;
 }
-int my_putstring(char *ptr)
-{
-	return write(1,ptr,my_strlen(ptr));
-}
+int my_putstring(char *ptr);
 int my_getnbr(char const *str)
 {
 	int i = 0;

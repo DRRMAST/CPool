@@ -1,14 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
-int my_strlen(const char *s1)
-{
-	int n = 0;  
-    while(*s1++)   
-    {  
-        n++;      
-    }  
-    return n;  
-}
+int my_strlen ( char const * str );
 char *my_evil_str(char *str)
 {
 	int len = 0;
