@@ -9,7 +9,7 @@ typedef struct List
 	struct List *prev;
 	char val;
 }List;
-void my_putchar(char c);
+int my_putchar(char c);
 List *push_front_item(List *plist,char c)
 {
 	List *phead = NULL;

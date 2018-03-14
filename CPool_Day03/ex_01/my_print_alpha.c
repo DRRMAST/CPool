@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "../tests/my_print_alpha.h"
-void my_putchar(char c);
 
+int my_putchar(char c);
 int my_print_alpha(void)
 {
 	char t = 'a';

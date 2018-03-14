@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "../tests/my_print_comb2.h"
 
-void my_putchar(char c);
+int my_putchar(char c);
 int my_print_comb2()
 {
 	int n1 = 0;
