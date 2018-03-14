@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "../src/my_print_comb.h"
+#include "my_print_comb.h"
 
 int main()
 {

@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "../src/my_put_nbr.h"
+#include "../tests/my_put_nbr.h"
 
 int my_put_nbr(int nb)
 {	

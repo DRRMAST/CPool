@@ -1,6 +1,5 @@
 #include <unistd.h>
-#include "../src/my_put_nbr.h"
-#include "../src/my_putchar.h"
+#include "my_put_nbr.h"
 
 int main(void)
 {

@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "../src/my_isneg.h"
+#include "../tests/my_isneg.h"
 int my_isneg(int n)
 {
 	char r = 'P';

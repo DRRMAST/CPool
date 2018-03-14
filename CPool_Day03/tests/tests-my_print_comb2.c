@@ -1,6 +1,5 @@
 #include <unistd.h>
-#include "../src/my_putchar.h"
-#include "../src/my_print_comb2.h"
+#include "my_print_comb2.h"
 
 int main()
 {

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "../src/my_print_revalpha.h"
+#include "../tests/my_print_revalpha.h"
 int my_print_revalpha(void)
 {
 	char t = 'z';

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "../src/my_print_alpha.h"
-#include "../src/my_putchar.h"
+#include "../tests/my_print_alpha.h"
+void my_putchar(char c);
 
 int my_print_alpha(void)
 {

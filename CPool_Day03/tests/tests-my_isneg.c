@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "../src/my_isneg.h"
+#include "my_isneg.h"
 
 int main(void)
 {

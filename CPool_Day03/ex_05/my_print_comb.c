@@ -1,6 +1,5 @@
 #include <unistd.h>
-#include "../src/my_print_comb.h"
-#include "../src/my_putchar.h"
+#include "../tests/my_print_comb.h"
 
 int my_print_comb(void)
 {

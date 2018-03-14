@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include "../src/my_print_digits.h"
+#include "../tests/my_print_digits.h"
 
 int my_print_digits(void)
 {
