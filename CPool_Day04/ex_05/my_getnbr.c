@@ -55,10 +55,16 @@ int my_getnbr(char const *str)
 		t = *cp;
 		if((t >= '0' && t <= '9') || t == '-' || t == '+')
 		{
+			if(nbr_flag == 'y' && nbr_len != 0 && (t == '-' || t == '+'))
+				break;
 			nbr_flag = 'y';
 			if(t >= '0' && t <= '9')
 			{
 				nbr_len++;
+				if(nbr_len > 10){
+					line_flag = 1;
+					break;
+				}
 				re[i] = t;	
 				i++;
 			}
@@ -102,4 +108,3 @@ int my_getnbr(char const *str)
 	}
 	return sum;
 }
-
