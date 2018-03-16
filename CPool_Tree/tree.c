@@ -35,6 +35,10 @@ void print_trunk(int size,int max)
 {
 	int i = 0;
 	int space; 
+	if(size == 0)
+		return;
+	if(size % 2 == 0)
+		size = size + 1;
 	space = max / 2 - (size / 2);
 	while(i < size)
 	{
@@ -42,20 +46,6 @@ void print_trunk(int size,int max)
 		print_trunk_line(size);
 		i++;
 	}
-}
-
-void print_tier(int tn,int leaf,int max)
-{
-	int i = 1;
-	int space;
-	while(i <= tn + 3)
-		{
-			space = max / 2 - leaf / 2;
-			print_space(space);
-			print_leaf_line(leaf);
-			leaf = leaf + 2;
-			i++;
-		}
 }
 int cal_max(int size)
 {
@@ -78,11 +68,24 @@ int cal_max(int size)
 	}
 	return max;
 }
+void print_tier(int tn,int leaf,int max)
+{
+	int i = 1;
+	int space;
+	while(i <= tn + 3)
+		{
+			space = max / 2 - leaf / 2;
+			print_space(space);
+			print_leaf_line(leaf);
+			leaf = leaf + 2;
+			i++;
+		}
+}
 void tree(int size)
 {
-	int i = 1,j = 1;
+	int i = 1;
 	int first_line = 1;
-	int max,space,leaf;
+	int max,leaf;
 	max = cal_max(size);
 	int leaf_max = 7;
 	while(i <= size)
