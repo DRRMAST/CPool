@@ -97,7 +97,7 @@ void colle02(int col,int row)
 }
 int main()
 {
-	colle02(4,4);
+	colle02(1,4);
 	//colle02(5,1);
 	return 0;
 }
