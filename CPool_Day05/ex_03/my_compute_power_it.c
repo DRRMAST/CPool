@@ -11,7 +11,6 @@ int my_compute_power_it(int nb, int p)
 	while(p > 0)
 	{
 		re = re * nb;
-		printf("re %d\n",re);
 		p--;
 	}
 	return re;
