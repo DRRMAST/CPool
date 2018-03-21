@@ -1,41 +1,46 @@
 #include <unistd.h>
 #include "../tests/my_put_nbr.h"
 
-int my_put_nbr(int nb)
+int my_strlen ( char const * str );
+int my_putstr ( char const * str );
+int my_put_nbr(int num)
 {	
-	if(nb >= 0)
-	{
-		if(nb >= 10)
-	{
-		my_put_nbr(nb / 10);
-		nb = nb % 10;
+	if(num == -2147483648){
+		my_putstr("-2147483648");
+		return 0;
 	}
-	if(nb >= 0 && nb < 10)
+	if(num >= 0)
 	{
-		char r = nb + '0';
-		write(1,&r,1);
+		if(num >= 10)
+	{
+		my_put_nbr(num / 10);
+		num = num % 10;
+	}
+	if(num >= 0 && num < 10)
+	{
+		char res = num + '0';
+		write(1,&res,1);
 	}
 	}
 	else
 	{
-		char flag = '-';
-		nb = nb * -1;
-		write(1,&flag,1);
-		if(nb >= 10)
+		char minus = '-';
+		num = num * -1;
+		write(1,&minus,1);
+		if(num >= 10)
 	{
-		my_put_nbr(nb / 10);
-		nb = nb % 10;
+		my_put_nbr(num / 10);
+		num = num % 10;
 	}
-	if(nb >= 0 && nb < 10)
+	if(num >= 0 && num < 10)
 	{
-		char r = nb + '0';
-		write(1,&r,1);
+		char res = num + '0';
+		write(1,&res,1);
 	}
 	}
 
 	return 0;
 }
-
 
 
 
