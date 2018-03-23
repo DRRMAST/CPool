@@ -22,7 +22,7 @@ char **my_str_to_word_array(char const *str)
 	re[0] = malloc(sizeof(char) * (my_strlen(str) + 1));
 	while(str[end])
 	{
-		if(is_alphanumeric(str[i])){
+		if(is_alphanumeric(str[end])){
 			end_flag = 1;
 			re[i][j] = str[end];
 			j++;
