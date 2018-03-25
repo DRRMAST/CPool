@@ -41,11 +41,4 @@ int	match(char *s1, char *s2)
 		return 1;
 	else
 		return 0;
-}
-
-int main(int argc, char *argv[])
-{
-	if(argv[1] != NULL && argv[2] != NULL)
-		my_put_nbr(match(argv[1],argv[2]));
-	return 0;
 }	
