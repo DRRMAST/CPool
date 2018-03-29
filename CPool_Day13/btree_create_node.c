@@ -1,5 +1,5 @@
 #include "./include/btree.h"
-#include "./include/my.h"
+
 btree_t *btree_create_node ( void *item ) 
 {
 	btree_t *elem = NULL;
